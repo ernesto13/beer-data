@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
 
-
-
 // fetch testing with opendata
 const search = document.getElementById("search"),
   submit = document.getElementById("submit"),

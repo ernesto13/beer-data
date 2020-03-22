@@ -34,33 +34,29 @@ function searchData(e) {
           mediaDiv.innerHTML = data.records
             .map(
               record =>
-                ` <div class='record m-2 col-sm-12 col-md-6 col-lg-8'>
+                ` <div class='record card card-cascade mt-2 mb-3'>
 
-
-                        <div class="card record-info" data-recordID ="${
+                        <div class="card record-info view view-cascade gradient-card-header blue-gradient" data-recordID ="${
                           record.fields.id
                         }">
 
-                        <h5 class="card-header"><strong>${record.fields.name}</strong></h5>
+                        <h5 class="card-header-title mb-3 mt-2 text-center text-white"><strong>${record.fields.name}</strong></h5>
+                        <span class="card-header-subtitle text-center text-white">
+                            <small><strong>Brewer: </strong>${record.fields.name_breweries}</small>
+                        </span>
 
-<div class="card-body">
+                      </div>
+                    <div class="card-body card-body-cascade text-center">
                         <h5 class="text-center"><strong>ABV: </strong>${record.fields.abv.toFixed(
                           1
                         )}</h5>
                         <h6 class="text-center"><strong>Style:</strong> ${
                           record.fields.cat_name
                         }</h6>
-                        <p><strong>Description:</strong> ${record.fields.descript}</p>
-</div>
-                      <div class="card-footer">
-                        <a href="${record.fields.website}" target="_blank">${
-                  record.fields.name
-                } Website </a>
-<span class="text-right">
-                    <small><strong>Brewer: </strong>${record.fields.name_breweries}</small>
-</span>
-
-</div>
+                        <p class="card-text"><strong>Description:</strong> ${record.fields.descript}</p>
+                    </div>
+                      <div class="card-footer text-center">
+                      <a href="${record.fields.website}" target="_blank" class="px-2 fa-lg code-ic"><i class="fas fa-file-code fa-2x"> </i></a>
 
                         </div>
 

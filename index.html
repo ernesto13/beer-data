@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fetch</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--bootswatch, change name to whatever premade theme. sketchy is used in this one-->
+    <!--<link-->
+    <!--  rel="stylesheet"-->
+    <!--  href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/minty/bootstrap.min.css"-->
+    <!--/>-->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="assets/javascript/script.js" defer></script>
+  </head>
+  <body>
+    <!--<div class="container">-->
+    <!--  <h1>Beer Data</h1>-->
+    <!--  <div id="result_heading">-->
+
+    <!--  </div>-->
+
+  <!--    <form id="submit" class="form-inline">-->
+        <!--   <label class="sr-only" for="inlineFormInputName2">Name</label>
+  <!--<input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">-->
+
+  <!--<label class="sr-only" for="inlineFormInputGroupUsername2">Username</label> -->
+  <!--      <div class="input-group mb-2 mr-sm-2">-->
+  <!--        <div class="input-group-prepend">-->
+  <!--          <div class="input-group-text"><i class="fas fa-beer"></i></div>-->
+  <!--        </div>-->
+  <!--        <input-->
+  <!--          type="text"-->
+  <!--          class="form-control"-->
+  <!--          id="search"-->
+  <!--          placeholder="Search"-->
+  <!--        />-->
+  <!--      </div>-->
+
+        <!--<button id="submitBtn" type="submit" class="btn btn-primary mb-2">-->
+        <!--  Search-->
+        <!--</button>-->
+  <!--    </form>-->
+
+  <!--    <div id="media">-->
+        <!--     info here     -->
+  <!--    </div>-->
+    <!--</div>-->
+
+   <form id="submit" class="form-inline">
+  <div class="form-group">
+    <label for="search" class="bmd-label-floating">Search</label>
+    <input type="text" class="form-control" id="search">
+  </div>
+  <!--<div class="form-group">-->
+  <!--  <label for="exampleInputEmail2" class="bmd-label-floating">Email</label>-->
+  <!--  <input type="email" class="form-control" id="exampleInputEmail2">-->
+  <!--</div>-->
+  <span class="form-group bmd-form-group"> <!-- needed to match padding for floating labels -->
+    <button id="submitBtn" type="submit" class="btn btn-primary">Search Brews</button>
+  </span>
+</form>
+<div id="media">
+        <!--     info here     -->
+      </div>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+  </body>
+</html>

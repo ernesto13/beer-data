@@ -1,2 +1,2 @@
-# drug-info
-medical drugs, substance
+# Beer data
+get info from variety of beers. Powered by opendata API.

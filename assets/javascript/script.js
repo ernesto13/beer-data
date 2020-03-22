@@ -54,7 +54,7 @@ function searchData(e) {
                         <p class="card-text"><strong>Description:</strong> ${record.fields.descript}</p>
                     </div>
                       <div class="card-footer text-center">
-                      <a href="${record.fields.website}" target="_blank" class="px-2 fa-lg code-ic"><i class="fas fa-file-code fa-2x"> </i></a>
+                      <a href="${record.fields.website}" target="_blank" class="px-2 fa-lg code-ic"><i class="fas fa-file-code fa-1x"> </i></a>
 
                         </div>
 

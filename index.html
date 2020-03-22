@@ -26,15 +26,33 @@
 <div class="container">
 
 <!--material design bootstrap-->
-<!-- Material input -->
-<form id="submit">
-<div class="md-form">
-  <i class="fas fa-beer prefix"></i>
-  <input id="search" type="text" class="form-control">
-  <label for="search">Search Brews</label>
+
 </div>
-<!-- Grid row -->
-  <button id="submitBtn" type="submit" class="btn btn-primary btn-md">Search</button>
+
+<!-- Default form subscription -->
+<form id="submit" class="text-center border border-light p-5" action="#!">
+
+    <p class="h4 mb-4">Beer Data</p>
+
+    <p>Search for info on beers.</p>
+
+    <p>
+        <a href="" target="_blank">See the last newsletter</a>
+    </p>
+
+    <!-- Name -->
+    <div class="md-form mt-3">
+
+                <input type="text" id="search" class="form-control">
+                <label for="search">Search Brews</label>
+            </div>
+
+    <!-- Email -->
+    <!--<input type="email" id="defaultSubscriptionFormEmail" class="form-control mb-4" placeholder="E-mail">-->
+
+    <!-- Sign in button -->
+    <button id="submitBtn" class="btn btn-info btn-block" type="submit"><i class="fas fa-beer prefix"></i> Search</button>
+
 </form>
 
       </div>

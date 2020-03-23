@@ -25,9 +25,9 @@ function searchData(e) {
         console.log(data);
         // result_heading.innerHTML = `<h3>Searched for '${term}' </h3>`;
 
-        if (data.records === null || data.records.length === 0) {
+        if (data.records === null) {
           console.log("Nothing found here!!!!!!!!");
-          result_heading.innerHTML = `<h3> nothing found! for '${term}'`;
+          mediaDiv.innerHTML = `<h3> nothing found! for '${term}'`;
 }
 
 
@@ -48,7 +48,6 @@ function searchData(e) {
                         </span>
 
                       </div>
-
 
 
                     <div class="card-body card-body-cascade text-center">
@@ -74,7 +73,7 @@ function searchData(e) {
 
     search.value = "";
   } else {
-    alert("Search Input needed!");
+    mediaDiv.innerHTML = `<h3> No empty input!`;
   }
 
   //   end

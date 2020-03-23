@@ -28,7 +28,11 @@ function searchData(e) {
         if (data.records === null || data.records.length === 0) {
           console.log("Nothing found here!!!!!!!!");
           result_heading.innerHTML = `<h3> nothing found! for '${term}'`;
-        } else {
+}
+
+
+
+        else {
           mediaDiv.innerHTML = data.records
             .map(
               record =>
@@ -44,10 +48,13 @@ function searchData(e) {
                         </span>
 
                       </div>
+
+
+
                     <div class="card-body card-body-cascade text-center">
                         <h5 class="text-center"><strong>ABV: </strong>${record.fields.abv.toFixed(
                           1
-                        )}</h5>
+                        )}%</h5>
                         <h6 class="text-center"><strong>Style:</strong> ${
                           record.fields.cat_name
                         }</h6>

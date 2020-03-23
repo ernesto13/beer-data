@@ -6,7 +6,8 @@ const search = document.getElementById("search"),
   submit = document.getElementById("submit"),
   mediaDiv = document.getElementById("media"),
   result_heading = document.getElementById("result_heading"),
-  spinnerLoader = document.getElementById('spinnerLoader');
+  spinnerLoader = document.getElementById('spinnerLoader'),
+  modalTitle = document.getElementById('modal-title');
   function spinn() {
     spinnerLoader.show()
   }
@@ -17,6 +18,7 @@ function searchData(e) {
   // get search term
   const term = search.value;
   console.log(term);
+  modalTitle.innerHTML = `Beer info on ${term}`;
 
   //   if statement
   // check for empty input with an if statement

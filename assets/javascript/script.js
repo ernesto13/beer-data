@@ -5,7 +5,11 @@ $(document).ready(function() {
 const search = document.getElementById("search"),
   submit = document.getElementById("submit"),
   mediaDiv = document.getElementById("media"),
-  result_heading = document.getElementById("result_heading");
+  result_heading = document.getElementById("result_heading"),
+  spinnerLoader = document.getElementById('spinnerLoader');
+  function spinn() {
+    spinnerLoader.show()
+  }
 
 
 function searchData(e) {
@@ -33,9 +37,12 @@ function searchData(e) {
 
 
         else {
+          // spinnerLoader.hide()
+
           mediaDiv.innerHTML = data.records
             .map(
               record =>
+
                 ` <div class='record card card-cascade mt-2 mb-3'>
 
                         <div class="card record-info view view-cascade gradient-card-header blue-gradient" data-recordID ="${
@@ -54,6 +61,7 @@ function searchData(e) {
                         <h5 class="text-center"><strong>ABV: </strong>${record.fields.abv.toFixed(
                           1
                         )}%</h5>
+
                         <h6 class="text-center"><strong>Style:</strong> ${
                           record.fields.cat_name
                         }</h6>
@@ -72,9 +80,12 @@ function searchData(e) {
     // clear search input
 
     search.value = "";
-  } else {
+
+  }
+  else {
     mediaDiv.innerHTML = `<h3> No empty input!`;
   }
+
 
   //   end
 }

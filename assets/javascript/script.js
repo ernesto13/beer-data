@@ -37,7 +37,7 @@ function searchData(e) {
 
 
         else {
-          // spinnerLoader.hide()
+
 
           mediaDiv.innerHTML = data.records
             .map(

@@ -8,9 +8,6 @@ const search = document.getElementById("search"),
   result_heading = document.getElementById("result_heading"),
   spinnerLoader = document.getElementById('spinnerLoader'),
   modalTitle = document.getElementById('modal-title');
-  function spinn() {
-    spinnerLoader.show()
-  }
 
 
 function searchData(e) {
@@ -35,6 +32,10 @@ function searchData(e) {
           console.log("Nothing found here!!!!!!!!");
           mediaDiv.innerHTML = `<h3> nothing found for '${term}'`;
 }
+        // if(data.records.fields === null){
+        //   console.log('no description')
+
+        // }
 
 
 
@@ -69,7 +70,11 @@ function searchData(e) {
                           record.fields.cat_name
                         }</h6>
                         <p class="card-text"><strong>Description:</strong> ${record.fields.descript}</p>
+                        <p class="card-text"><small>${record.fields.address1} ${record.fields.city}, ${record.fields.state}</small></p>
+
                     </div>
+
+
                       <div class="card-footer text-center">
                       <a href="${record.fields.website}" target="_blank" class="px-2 fa-lg code-ic"><i class="fas fa-file-code fa-1x"> </i></a>
 

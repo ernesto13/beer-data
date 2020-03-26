@@ -30,10 +30,10 @@ function searchData(e) {
       .then(data => {
         console.log(data);
         // result_heading.innerHTML = `<h3>Searched for '${term}' </h3>`;
-
-        if (data.records === null) {
+        // console.log(records.fields.abv)
+        if (data.records.length === 0) {
           console.log("Nothing found here!!!!!!!!");
-          mediaDiv.innerHTML = `<h3> nothing found! for '${term}'`;
+          mediaDiv.innerHTML = `<h3> nothing found for '${term}'`;
 }
 
 
@@ -44,6 +44,7 @@ function searchData(e) {
           mediaDiv.innerHTML = data.records
             .map(
               record =>
+
 
                 ` <div class='record card card-cascade mt-2 mb-3'>
 
@@ -61,8 +62,8 @@ function searchData(e) {
 
                     <div class="card-body card-body-cascade text-center">
                         <h5 class="text-center"><strong>ABV: </strong>${record.fields.abv.toFixed(
-                          1
-                        )}%</h5>
+                          1)}%</h5>
+
 
                         <h6 class="text-center"><strong>Style:</strong> ${
                           record.fields.cat_name
@@ -75,6 +76,7 @@ function searchData(e) {
                         </div>
 
                         </div>`
+
             )
             .join("");
         }

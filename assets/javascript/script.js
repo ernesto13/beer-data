@@ -90,7 +90,8 @@ function searchData(e) {
 
   }
   else {
-    mediaDiv.innerHTML = `<h3> No empty input!`;
+    mediaDiv.innerHTML = `<h3 class="text-center"> Search input empty!`;
+    modalTitle.innerHTML = ``;
   }
 
 

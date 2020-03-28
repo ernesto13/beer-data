@@ -28,7 +28,7 @@ function searchData(e) {
         // console.log(records.fields.abv)
         if (data.records.length === 0) {
           console.log("Nothing found here!!!!!!!!");
-          mediaDiv.innerHTML = `<h3> nothing found for '${term}'`;
+          mediaDiv.innerHTML = `<h3> Nothing found for "${term}"`;
 }
         // if(data.records.fields === null){
         //   console.log('no description')

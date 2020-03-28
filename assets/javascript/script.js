@@ -4,6 +4,7 @@ $(document).ready(function() {
 // fetch testing with opendata
 const search = document.getElementById("search"),
   submit = document.getElementById("submit"),
+  closeModal = document.getElementById("closeBtn"),
   mediaDiv = document.getElementById("media"),
   modalTitle = document.getElementById('modal-title');
 
@@ -99,6 +100,9 @@ function searchData(e) {
 }
 
 submit.addEventListener("submit", searchData);
+closeModal.addEventListener("click", () => {
+  mediaDiv.innerHTML = " ";
+});
 
 });
 

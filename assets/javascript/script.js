@@ -1,16 +1,19 @@
 $(document).ready(function() {
 
-$('.toast').toast('hide')
+$('.toast').toast('hide');
+$('.card-footer').hide();
 // fetch testing with opendata
 const search = document.getElementById("search"),
   submit = document.getElementById("submit"),
   closeModal = document.querySelector(".closeBtn"),
   mediaDiv = document.getElementById("media"),
+  nutrition = document.getElementById("nutrition"),
   modalTitle = document.getElementById('modal-title');
   function clearDiv(){
     mediaDiv.innerHTML = " ";
   }
 clearDiv();
+
 
 function searchData(e) {
 
@@ -151,8 +154,8 @@ $.ajax(settings).done(function (response) {
 	sugar.innerHTML = `Sugars: ${response.hits[0].fields.nf_sugars}`;
 	sodium.innerHTML = `Sodium ${response.hits[0].fields.nf_sodium}`;
 
+$('.card-footer').show();
 
-$('.toast').toast('show')
 
 
 });
@@ -161,7 +164,9 @@ $('.toast').toast('show')
 
 
 //////////////////////
-
+nutrition.addEventListener("click", () => {
+  $('.toast').toast('show');
+})
     submit.addEventListener("submit", searchData, searchBeerInfo);
 
 

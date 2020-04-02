@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 $('.toast').toast('hide');
-$('.card-footer').hide();
+$('.cardFooter').hide();
 // fetch testing with opendata
 const search = document.getElementById("search"),
   submit = document.getElementById("submit"),
@@ -154,7 +154,7 @@ $.ajax(settings).done(function (response) {
 	sugar.innerHTML = `Sugars: ${response.hits[0].fields.nf_sugars}`;
 	sodium.innerHTML = `Sodium ${response.hits[0].fields.nf_sodium}`;
 
-$('.card-footer').show();
+$('.cardFooter').show();
 
 
 
